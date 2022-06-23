@@ -29,7 +29,7 @@ public class GamePanel extends JPanel{
 		// コンポネートの位置とサイズを指定
 		gameLabel.setBounds(100,200,100,30);
 		// ラベルをこのパネルに貼る
-		// ？なぜthisを使用するのか？
+		// なぜthisを使用するのか？
 		this.add(gameLabel);
 
 	}

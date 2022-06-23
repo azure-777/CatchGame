@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		// ウィンドウのみを生成
 		mainWindow = new MainWindow();
-		// ペインに直接貼るパネルのみを生成
+		// ペインに貼るパネルのみを生成
 		mainWindow.preparePanels();
 		// その他のコンポネートを生成
 		mainWindow.prepareComponents();

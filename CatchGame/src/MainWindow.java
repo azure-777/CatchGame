@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
+// メインウィンドウのクラス
 public class MainWindow extends JFrame {
 	private static final long serialVersionUID = 1L;
 	// フィールド
