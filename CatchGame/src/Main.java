@@ -11,7 +11,7 @@ public class Main {
 		mainWindow.prepareComponents();
 		// 起動後、最初に表示させる画面を設定
 		mainWindow.setFrontScreenAndFoucus(ScreenMode.TITLE);
-		// ウィンドウを可視化
+		// ウィンドウを可視化する
 		mainWindow.setVisible(true);
 
 	}
