@@ -3,7 +3,7 @@
 public class Main {
 	static MainWindow mainWindow;
 	public static void main(String[] args) {
-		// ウィンドウのみを生成
+		// ウィンドウのみを生成する
 		mainWindow = new MainWindow();
 		// ペインに貼るパネルのみを生成
 		mainWindow.preparePanels();
