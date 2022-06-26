@@ -16,17 +16,26 @@ public class MainPanel extends JPanel {
 
 	// コンストラクタ
 	public MainPanel() {
-		// TODO 自動生成されたコンストラクター・スタブ
+		// レイアウトの設定
+		this.setLayout(null);
+		// 背景の色
+		this.setBackground(backgroundColor);
 	}
 
-	//
-	public void prepareComponents() {}
+	// コンポネートの処理
+	public void prepareComponents() {
+		// ラベル生成
+		catLabel = new CatLabel();
+		// ラベルを対象パネルに貼る
+		this.add(catLabel);
+		mykeyListener = new MykeyListener(this);
+	}
 
 	//ネコの制御(内部クラス)
 	private class MykeyListener implements KeyListener{
 		// 貼りつけ先を保持
 		MainPanel panel;
-
+		// コンストラクタ
 		MykeyListener(MainPanel p){
 		super();
 		panel = p;

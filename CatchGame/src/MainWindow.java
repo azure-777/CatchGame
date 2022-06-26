@@ -9,15 +9,16 @@ import javax.swing.JFrame;
 public class MainWindow extends JFrame {
 	private static final long serialVersionUID = 1L;
 	// フィールド
-	ScreenMode screenMode =ScreenMode.TITLE;
+	ScreenMode screenMode =ScreenMode.MAIN;
 	// 定数
-	final int WIDTH = 800; // フレームの幅
-	final int HEIGHT = 600; // フレームの高さ
+	final int WIDTH = 400; // フレームの幅 800
+	final int HEIGHT = 400; // フレームの高さ 600
 	// レイアウト
 	CardLayout layout = new CardLayout();
 	// コンポネート
 	TitlePanel titlePanel;
 	GamePanel gamePanel;
+	MainPanel mainPanel;
 
 	// コンストラクタ
 	MainWindow(){
@@ -56,12 +57,16 @@ public class MainWindow extends JFrame {
 		// 下記thisはGamePanelクラスのインスタンスを指す？
 		this.add(gamePanel,"ゲーム画面");
 		this.pack();
+		// 下記thisはMainPanelクラスのインスタンスを指す？
+		this.add(mainPanel,"メイン画面");
+		this.pack();
 	}
 
 	// コンポネートを準備するメソッド
 	public void prepareComponents() {
 		titlePanel.prepareComponents();
 		gamePanel.prepareComponents();
+		mainPanel.prepareComponents();
 	}
 
 	// スクリーンモードを切り替える
@@ -76,6 +81,10 @@ public class MainWindow extends JFrame {
 		case GAME:
 			layout.show(this.getContentPane(),"ゲーム画面");
 			gamePanel.requestFocus();
+			break;
+		case MAIN:
+			layout.show(this.getContentPane(),"メイン画面");
+			mainPanel.requestFocus();
 			break;
 		}
 
