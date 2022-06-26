@@ -15,7 +15,7 @@ public class CatLabel extends JLabel {
 	// コンストラクタ
 	CatLabel(){
 		// 画像の設定
-		catImage = new ImageIcon(getClass().getClassLoader().getResource("")).getImage();
+		catImage = new ImageIcon(getClass().getClassLoader().getResource("gassyou_neko.png")).getImage();
 		// 貼り付け先の位置とラベルサイズを設定
 		this.setBounds(100,100,catImage.getWidth(null),catImage.getHeight(null));
 	}
