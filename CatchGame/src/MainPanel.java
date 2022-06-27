@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class MainPanel extends JPanel {
@@ -11,6 +12,7 @@ public class MainPanel extends JPanel {
 	Color backgroundColor = Color.green;
 	// コンポネート
 	CatLabel catLabel;
+	JLabel mainLabel;
 	// リスナー
 	MykeyListener mykeyListener;
 
@@ -24,10 +26,16 @@ public class MainPanel extends JPanel {
 
 	// コンポネートの処理
 	public void prepareComponents() {
-		// ラベル生成
+		// 各ラベル生成
 		catLabel = new CatLabel();
-		// ラベルを対象パネルに貼る
+		mainLabel = new JLabel();
+		// メインラベルに文字を記載？
+		mainLabel.setText("");
+		// メインラベルの位置とサイズを指定
+		mainLabel.setBounds(100,200,100,30);
+		// 各ラベルを対象パネルに貼る
 		this.add(catLabel);
+		this.add(mainLabel);
 		mykeyListener = new MykeyListener(this);
 	}
 

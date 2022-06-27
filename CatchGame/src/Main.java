@@ -13,7 +13,6 @@ public class Main {
 		mainWindow.setFrontScreenAndFoucus(ScreenMode.MAIN);
 		// ウィンドウを可視化
 		mainWindow.setVisible(true);
-
 	}
 
 }

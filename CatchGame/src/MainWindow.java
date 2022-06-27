@@ -11,8 +11,8 @@ public class MainWindow extends JFrame {
 	// フィールド
 	ScreenMode screenMode =ScreenMode.MAIN;
 	// 定数
-	final int WIDTH = 400; // フレームの幅 800
-	final int HEIGHT = 400; // フレームの高さ 600
+	final int WIDTH = 800; // フレームの幅 800
+	final int HEIGHT = 600; // フレームの高さ 600
 	// レイアウト
 	CardLayout layout = new CardLayout();
 	// コンポネート
@@ -56,8 +56,8 @@ public class MainWindow extends JFrame {
 		gamePanel = new GamePanel();
 		// 下記thisはGamePanelクラスのインスタンスを指す？
 		this.add(gamePanel,"ゲーム画面");
-		this.pack();
 		// 下記thisはMainPanelクラスのインスタンスを指す？
+		mainPanel = new MainPanel();
 		this.add(mainPanel,"メイン画面");
 		this.pack();
 	}
