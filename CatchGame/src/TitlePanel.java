@@ -83,7 +83,22 @@ public class TitlePanel extends JPanel {
 		exit.setBorder(border); //解決できない場合は削除でおk
 
 		// 選択肢アイコン
+		select = new JLabel();
+		select.setBackground(Color.blue);
+		select.setOpaque(true);
+		select.setBounds(280,400,40,40);
+		select.setBorder(border); //解決できない場合は削除でおk
 
+		// 説明
+		message = new JLabel();
+		message.setHorizontalAlignment(SwingConstants.CENTER);
+		message.setText("選択：↑↓  決定：SPACE");
+		message.setHorizontalTextPosition(JLabel.CENTER);
+		message.setVerticalTextPosition(JLabel.CENTER);
+		message.setBounds(249,517,300,30);
+		message.setBorder(border); //解決できない場合は削除でおk
+
+		// 配置
 	}
 
 	//選択の制御(内部クラス)
