@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JLabel;
@@ -46,8 +47,11 @@ public class TitlePanel extends JPanel {
 		// ラベルをこのパネルに貼る
 		/*
 		  なぜthisを使用するのか？
-		  そもそもthisは自身のインスタンスを指す
-		  この場合、JLabelクラスのインスタンスに①と②の内容を追加しているのか？
+		  そもそもthisは自身のオブジェクト（インスタンスとクラス）を指す。
+		  今回の場合のthisは、JPanelクラスを継承したTitlePanelクラスのこと。
+		  さらに、JPanelクラスはContainerクラスを継承している。
+		  また、Containerクラスにはaddメソッドがある。
+		  Containerクラスにはaddメソッドは引数で指定されたコンポネートを最後に追加する。
 		 */
 		this.add(titleLabel);
 
@@ -99,8 +103,78 @@ public class TitlePanel extends JPanel {
 		message.setBorder(border); //解決できない場合は削除でおk
 
 		// 配置
+		this.setLayout(null);
+		this.add(title);
+		this.add(start);
+		this.add(exit);
+		this.add(select);
+		this.add(message);
+
+		// リスナーの設定
+		mykeyListener = new MykeyListener(this);
 	}
 
 	//選択の制御(内部クラス)
-		private class MykeyListener implements KeyListener{}
+		private class MykeyListener implements KeyListener{
+			// 貼りつけ先を保持
+			TitlePanel panel;
+
+			// コンストラクタ
+			MykeyListener(TitlePanel p){
+			super();
+			panel = p;
+			panel.addKeyListener(this);
+		    }
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// do nothing
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+				// do nothing
+			}
+			@Override
+			public void keyPressed(KeyEvent e) {
+				switch(e.getKeyCode()) {
+				// 下を押した場合かつ
+				case KeyEvent.VK_DOWN:
+					// checkMenu変数の値とMenu.STARTで取得した値が同値の場合
+					if(checkMenu == Menu.START) {
+						// 選択肢をY軸にプラス50をした場所に移動
+						select.setLocation(select.getX(),select.getY()+50);
+						checkMenu = Menu.EXIT;
+					}
+					break;
+
+				// 上を押した場合かつ
+				case KeyEvent.VK_UP:
+					// checkMenu変数の値とMenu.EXITで取得した値が同値の場合
+					if(checkMenu == Menu.EXIT) {
+						// 選択肢をY軸にマイナス50をした場所に移動
+						select.setLocation(select.getX(),select.getY()-50);
+					}
+					break;
+
+				// スペースキーを押した場合かつ
+				case KeyEvent.VK_SPACE:
+					// checkMenu変数の値とMenu.STARTで取得した値が同値の場合
+					if(checkMenu == Menu.START) {
+						// ゲームが開始する（＝画面切り替えメソッドが呼び出される）
+						Main.mainWindow.setFrontScreenAndFocus(ScreenMode.GAME);
+					// checkMenu変数の値とMenu.EXITで取得した値が同値の場合
+					}else if(checkMenu == Menu.EXIT) {
+						// ゲームが終了する（＝プログラムの終了）
+						System.exit(0);
+					}
+					break;
+
+				/*
+				 * 疑問
+				 * Menu.STARTとMenu.EXITが何を指しているか不明
+				 */
+				}
+			}
+		}
 }
