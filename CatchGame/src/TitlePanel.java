@@ -3,9 +3,11 @@ import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import javax.swing.border.Border;
 
 // タイトルパネルのクラス
 public class TitlePanel extends JPanel {
@@ -19,6 +21,7 @@ public class TitlePanel extends JPanel {
 	JLabel select;
 	JLabel message;
 	Menu checkMenu = Menu.START;
+	Border border = BorderFactory.createLineBorder(Color.BLACK,2);
 	MykeyListener mykeyListener;
 
 	// 列挙型
@@ -154,6 +157,7 @@ public class TitlePanel extends JPanel {
 					if(checkMenu == Menu.EXIT) {
 						// 選択肢をY軸にマイナス50をした場所に移動
 						select.setLocation(select.getX(),select.getY()-50);
+						checkMenu = Menu.START;
 					}
 					break;
 

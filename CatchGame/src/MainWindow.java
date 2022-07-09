@@ -70,7 +70,7 @@ public class MainWindow extends JFrame {
 	}
 
 	// スクリーンモードを切り替える
-	public void setFrontScreenAndFoucus(ScreenMode s) {
+	public void setFrontScreenAndFocus(ScreenMode s) {
 		screenMode = s;
 		// 表示される画面の設定
 		switch(screenMode) {

@@ -10,7 +10,7 @@ public class Main {
 		// その他のコンポネートを生成
 		mainWindow.prepareComponents();
 		// 起動後、最初に表示させる画面を設定
-		mainWindow.setFrontScreenAndFoucus(ScreenMode.MAIN);
+		mainWindow.setFrontScreenAndFocus(ScreenMode.TITLE);
 		// ウィンドウを可視化
 		mainWindow.setVisible(true);
 	}
