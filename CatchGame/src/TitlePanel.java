@@ -175,8 +175,16 @@ public class TitlePanel extends JPanel {
 					break;
 
 				/*
-				 * 疑問
-				 * Menu.STARTとMenu.EXITが何を指しているか不明
+				 * 疑問①
+				 * Menu.STARTとMenu.EXITが何を指しているか？
+				 * →列挙型Menuの列挙子STARTとEXITを指す
+				 * 列挙型（enum）は定数になる
+				 */
+
+				/*
+				 * 疑問②
+				 * Menu.STARTとMenu.EXITの値は？
+				 * →
 				 */
 				}
 			}
