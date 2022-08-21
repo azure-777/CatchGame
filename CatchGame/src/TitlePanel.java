@@ -182,7 +182,7 @@ public class TitlePanel extends JPanel {
 				 */
 
 				/*
-				 * 疑問②
+				 * 疑問②【未解決】
 				 * Menu.STARTとMenu.EXITの値は？
 				 * →
 				 */
