@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 public class MainWindow extends JFrame {
 	private static final long serialVersionUID = 1L;
 	// フィールド
-	ScreenMode screenMode =ScreenMode.MAIN;
+	ScreenMode screenMode = ScreenMode.MAIN;
 	// 定数
 	final int WIDTH = 800; // 前フレームの幅 800
 	final int HEIGHT = 600; //前 フレームの高さ 600
