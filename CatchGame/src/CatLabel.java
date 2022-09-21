@@ -36,6 +36,7 @@ public class CatLabel extends JLabel {
 		this.setLocation(x,y);
 	}
 
+	//ネコの動作処理
 	public void paint(Graphics g) {
 		super.paint(g);
 		//ネコ画像の処理
