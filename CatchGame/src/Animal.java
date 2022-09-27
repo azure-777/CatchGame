@@ -43,7 +43,7 @@ public abstract class Animal extends JLabel {
 		this.setBounds(x,y,image.getWidth(null),image.getHeight(null));
 	}
 
-	//設定
+	//設定(抽象メソッド)
 	protected abstract void prepareImageAndScoreAndVoice();
 
 	//画像の動作処理
