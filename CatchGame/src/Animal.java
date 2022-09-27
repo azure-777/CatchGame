@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.Timer;
 
 /*
- * 動物用抽象クラス
+ * 動物抽象クラス
  * 捕獲時の画像、スコア、鳴き声をサブクラスで指定する
  */
 
