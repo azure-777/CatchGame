@@ -14,7 +14,6 @@ public class FieldPanel extends JPanel {
 	JLabel gameLabel;
 	JLayeredPane layeredPane;
 	CatPot catPot;
-	Animal animal;
 	CatLabel cat01;
 	// コンストラクタ
 	public FieldPanel() {
@@ -133,9 +132,9 @@ public class FieldPanel extends JPanel {
 			int pw = catPot.getWidth();
 
 			if((px<x)&&(x<px+pw)&&(py<y)&&(y<py+ph)) {
-				animal.setVisible(false);
+				cat.setVisible(false);
 			}else {
-				animal.timer.start();
+				cat.timer.start();
 			}
 		}
 
