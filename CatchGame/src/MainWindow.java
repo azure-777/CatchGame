@@ -44,7 +44,7 @@ public class MainWindow extends JFrame {
 		this.setLocationRelativeTo(null);
 	}
 
-	// パネルを準備するメソッド
+	//パネルを準備するメソッド
 	public void preparePanels() {
 		//TitlePanelをMainWindowに追加
 		titlePanel = new TitlePanel();

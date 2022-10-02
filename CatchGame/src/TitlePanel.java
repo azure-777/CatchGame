@@ -9,11 +9,11 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 
-// タイトルパネルのクラス
+//タイトルパネルのクラス
 public class TitlePanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 
-	// コンポネート
+	//コンポネート
 	JLabel titleLabel;
 	JLabel title;
 	JLabel start;
@@ -24,30 +24,30 @@ public class TitlePanel extends JPanel {
 	Border border = BorderFactory.createLineBorder(Color.BLACK,2);
 	MykeyListener mykeyListener;
 
-	// 列挙型
+	//列挙型
 	public enum Menu{
 		START,
 		EXIT
 	}
 
-	// コンストラクタ
+	//コンストラクタ
 	public TitlePanel() {
-		// パネルサイズと貼り付け位置の設定はCardLayoutが自動で設定する
-		// レイアウトの設定
+		//パネルサイズと貼り付け位置の設定はCardLayoutが自動で設定する
+		//レイアウトの設定
 		this.setLayout(null);
-		// 背景の設定 前色：red
+		//背景の設定
 		this.setBackground(Color.cyan);
 	}
 
-	// コンポネートの設定
+	//コンポネートの設定
 	public void prepareComponents() {
-		// ラベルを生成
+		//ラベルを生成
 		titleLabel = new JLabel();
-		// ①ラベルに文字を記入
+		//①ラベルに文字を記入
 		titleLabel.setText("タイトル画面");
-		// ②コンポネートの位置とサイズを指定
+		//②コンポネートの位置とサイズを指定
 		titleLabel.setBounds(100,0,100,30);
-		// ラベルをこのパネルに貼る
+		//ラベルをこのパネルに貼る
 		/*
 		  なぜthisを使用するのか？
 		  そもそもthisは自身のオブジェクト（インスタンスとクラス）を指す。
@@ -58,10 +58,10 @@ public class TitlePanel extends JPanel {
 		 */
 		this.add(titleLabel);
 
-		// タイトルロゴを作成
-		// タイトルロゴを作成するためにJLabelのインスタンスを生成してtitle変数に代入
+		//タイトルロゴを作成
+		//タイトルロゴを作成するためにJLabelのインスタンスを生成してtitle変数に代入
 		title = new JLabel();
-		// タイトルロゴの設定
+		//タイトルロゴの設定
 		title.setHorizontalAlignment(SwingConstants.CENTER);
 		title.setVerticalAlignment(SwingConstants.BOTTOM);
 		title.setText("CAT");
@@ -70,8 +70,8 @@ public class TitlePanel extends JPanel {
 		title.setBounds(90,0,600,350);
 		title.setBorder(border); //解決できない場合は削除でおk
 
-		// タイトルの選択肢作成
-		// START選択肢
+		//タイトルの選択肢作成
+		//START選択肢
 		start = new JLabel();
 		start.setText("START");
 		start.setFont(new Font("MV boli",Font.BOLD,40));
@@ -80,7 +80,7 @@ public class TitlePanel extends JPanel {
 		start.setBounds(330,400,150,40);
 		start.setBorder(border); //解決できない場合は削除でおk
 
-		// EXIT選択肢
+		//EXIT選択肢
 		exit = new JLabel();
 		exit.setText("exit");
 		exit.setFont(new Font("MV boli",Font.BOLD,40));
@@ -89,14 +89,14 @@ public class TitlePanel extends JPanel {
 		exit.setBounds(350,450,110,40);
 		exit.setBorder(border); //解決できない場合は削除でおk
 
-		// 選択肢アイコン
+		//選択肢アイコン
 		select = new JLabel();
 		select.setBackground(Color.blue);
 		select.setOpaque(true);
 		select.setBounds(280,400,40,40);
 		select.setBorder(border); //解決できない場合は削除でおk
 
-		// 説明
+		//説明
 		message = new JLabel();
 		message.setHorizontalAlignment(SwingConstants.CENTER);
 		message.setText("選択：↑↓  決定：SPACE");
@@ -105,7 +105,7 @@ public class TitlePanel extends JPanel {
 		message.setBounds(249,517,300,30);
 		message.setBorder(border); //解決できない場合は削除でおk
 
-		// 配置
+		//配置
 		this.setLayout(null);
 		this.add(title);
 		this.add(start);
@@ -113,16 +113,16 @@ public class TitlePanel extends JPanel {
 		this.add(select);
 		this.add(message);
 
-		// リスナーの設定
+		//リスナーの設定
 		mykeyListener = new MykeyListener(this);
 	}
 
 	//選択の制御(内部クラス)
 		private class MykeyListener implements KeyListener{
-			// 貼りつけ先を保持
+			//貼りつけ先を保持
 			TitlePanel panel;
 
-			// コンストラクタ
+			//コンストラクタ
 			MykeyListener(TitlePanel p){
 			super();
 			panel = p;
@@ -131,45 +131,45 @@ public class TitlePanel extends JPanel {
 
 			@Override
 			public void keyTyped(KeyEvent e) {
-				// do nothing
+
 			}
 
 			@Override
 			public void keyReleased(KeyEvent e) {
-				// do nothing
+
 			}
 			@Override
 			public void keyPressed(KeyEvent e) {
 				switch(e.getKeyCode()) {
-				// 下を押した場合かつ
+				//下を押した場合かつ
 				case KeyEvent.VK_DOWN:
-					// checkMenu変数の値とMenu.STARTで取得した値が同値の場合
+					//checkMenu変数の値とMenu.STARTで取得した値が同値の場合
 					if(checkMenu == Menu.START) {
-						// 選択肢をY軸にプラス50をした場所に移動
+						//選択肢をY軸にプラス50をした場所に移動
 						select.setLocation(select.getX(),select.getY()+50);
 						checkMenu = Menu.EXIT;
 					}
 					break;
 
-				// 上を押した場合かつ
+				//上を押した場合かつ
 				case KeyEvent.VK_UP:
-					// checkMenu変数の値とMenu.EXITで取得した値が同値の場合
+					//checkMenu変数の値とMenu.EXITで取得した値が同値の場合
 					if(checkMenu == Menu.EXIT) {
-						// 選択肢をY軸にマイナス50をした場所に移動
+						//選択肢をY軸にマイナス50をした場所に移動
 						select.setLocation(select.getX(),select.getY()-50);
 						checkMenu = Menu.START;
 					}
 					break;
 
-				// スペースキーを押した場合かつ
+				//スペースキーを押した場合かつ
 				case KeyEvent.VK_SPACE:
-					// checkMenu変数の値とMenu.STARTで取得した値が同値の場合
+					//checkMenu変数の値とMenu.STARTで取得した値が同値の場合
 					if(checkMenu == Menu.START) {
-						// ゲームが開始する（＝画面切り替えメソッドが呼び出される）
+						//ゲームが開始する（＝画面切り替えメソッドが呼び出される）
 						Main.mainWindow.setFrontScreenAndFocus(ScreenMode.GAME);
 					// checkMenu変数の値とMenu.EXITで取得した値が同値の場合
 					}else if(checkMenu == Menu.EXIT) {
-						// ゲームが終了する（＝プログラムの終了）
+						//ゲームが終了する（＝プログラムの終了）
 						System.exit(0);
 					}
 					break;

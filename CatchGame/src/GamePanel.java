@@ -6,7 +6,7 @@ import java.awt.event.KeyListener;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-// ゲームパネルクラス
+//ゲームパネルクラス
 public class GamePanel extends JPanel{
 	private static final long serialVersionUID = 1L;
 	//レイアウト
@@ -64,12 +64,12 @@ public class GamePanel extends JPanel{
 
 		@Override
 		public void keyTyped(KeyEvent e) {
-			// TODO 自動生成されたメソッド・スタブ
+
 		}
 
 		@Override
 		public void keyPressed(KeyEvent e) {
-			// TODO 自動生成されたメソッド・スタブ
+
 		}
 
 		@Override

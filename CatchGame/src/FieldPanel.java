@@ -15,25 +15,25 @@ public class FieldPanel extends JPanel {
 	JLayeredPane layeredPane;
 	CatPot catPot;
 	CatLabel cat01;
-	// コンストラクタ
+	//コンストラクタ
 	public FieldPanel() {
 		this.setBackground(Color.orange);
 		this.setLayout(null); //サイズは自動調整される
 	}
 
-	// コンストラクタの後に呼び出す処理
+	//コンストラクタの後に呼び出す処理
 	public void prepareComponents() {
 		//キャットラベルの生成
 		cat01 = new CatLabel();
 		vitalizeCat(cat01);
 //		gameLabel = new JLabel();
-//		// ラベルに文字を記入
+//		//ラベルに文字を記入
 //		gameLabel.setText("ゲーム画面");
-//		// 位置とサイズを指定
+//		//位置とサイズを指定
 //		gameLabel.setBounds(100,200,100,30);
-//		// 縁取り
+//		//縁取り
 //		gameLabel.setBorder(BorderFactory.createLineBorder(Color.black,3));
-//		// ラベルをこのパネルにはる
+//		//ラベルをこのパネルにはる
 //		this.add(gameLabel);
 
 		//レイヤーペインの追加
