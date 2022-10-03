@@ -132,6 +132,9 @@ public class FieldPanel extends JPanel {
 			int pw = catPot.getWidth();
 
 			if((px<x)&&(x<px+pw)&&(py<y)&&(y<py+ph)) {
+				//スコア計算
+
+				//不可視化処理
 				cat.setVisible(false);
 			}else {
 				cat.timer.start();

@@ -36,8 +36,8 @@ public class MenuBar extends JPanel {
 
 		//ラベル
 		homeLabel = new JLabel(" ←'H'click ");
-		homeLabel.setBounds(100,5,250,30);
-		homeLabel.setBorder(BorderFactory.createEtchedBorder(3,Color.black,Color.white));
+		homeLabel.setBounds(85,5,80,30);
+		homeLabel.setBorder(BorderFactory.createEtchedBorder(3,Color.black,Color.black));
 
 		//設置
 		this.add(homeButton);
