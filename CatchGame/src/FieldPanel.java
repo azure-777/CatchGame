@@ -133,7 +133,9 @@ public class FieldPanel extends JPanel {
 
 			if((px<x)&&(x<px+pw)&&(py<y)&&(y<py+ph)) {
 				//スコア計算
-
+				Main.mainWindow.gamePanel.menuBar.score += cat.score;
+				String str = "SCORE:" + Main.mainWindow.gamePanel.menuBar.score;
+				Main.mainWindow.gamePanel.menuBar.scoreLabel.setText(str);
 				//不可視化処理
 				cat.setVisible(false);
 			}else {

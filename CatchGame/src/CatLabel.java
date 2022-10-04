@@ -18,6 +18,8 @@ public class CatLabel extends JLabel {
 	int xVelocity;
 	int yVelocity;
 	Timer timer = null;
+	//捕獲時の得点(暫定：100)
+	int score = 100;
 
 	//コンストラクタ
 	CatLabel(){

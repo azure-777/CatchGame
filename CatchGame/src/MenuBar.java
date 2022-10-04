@@ -13,7 +13,9 @@ public class MenuBar extends JPanel {
 	//コンポネート
 	JButton homeButton;
 	JLabel homeLabel;
+	JLabel scoreLabel;
 	HomeButtonListener homeButtonListener;
+	int score;
 
 	//コンストラクタ
 	public MenuBar() {
@@ -34,14 +36,19 @@ public class MenuBar extends JPanel {
 		homeButtonListener = new HomeButtonListener();
 		homeButton.addActionListener(homeButtonListener);
 
-		//ラベル
+		//ホームラベル
 		homeLabel = new JLabel(" ←'H'click ");
 		homeLabel.setBounds(85,5,80,30);
 		homeLabel.setBorder(BorderFactory.createEtchedBorder(3,Color.black,Color.black));
 
+		//スコアラベル
+		scoreLabel = new JLabel("SCORE:0");
+		scoreLabel.setBounds(680,5,80,30);
+
 		//設置
 		this.add(homeButton);
 		this.add(homeLabel);
+		this.add(scoreLabel);
 
 		}
 
