@@ -46,7 +46,7 @@ public class TitlePanel extends JPanel {
 		//①ラベルに文字を記入
 		titleLabel.setText("タイトル画面");
 		//②コンポネートの位置とサイズを指定
-		titleLabel.setBounds(100,0,100,30);
+		titleLabel.setBounds(100,10,100,30);
 		//ラベルをこのパネルに貼る
 		/*
 		  なぜthisを使用するのか？
@@ -67,7 +67,7 @@ public class TitlePanel extends JPanel {
 		title.setText("CAT");
 		title.setHorizontalTextPosition(JLabel.CENTER);
 		title.setVerticalTextPosition(SwingConstants.BOTTOM);
-		title.setBounds(90,0,600,350);
+		title.setBounds(90,10,600,350);
 		title.setBorder(border); //解決できない場合は削除でおk
 
 		//タイトルの選択肢作成
@@ -78,16 +78,14 @@ public class TitlePanel extends JPanel {
 		start.setHorizontalTextPosition(JLabel.CENTER);
 		start.setVerticalTextPosition(JLabel.BOTTOM);
 		start.setBounds(330,400,150,40);
-		start.setBorder(border); //解決できない場合は削除でおk
 
 		//EXIT選択肢
 		exit = new JLabel();
-		exit.setText("exit");
+		exit.setText("EXIT");
 		exit.setFont(new Font("MV boli",Font.BOLD,40));
 		exit.setHorizontalTextPosition(JLabel.CENTER);
 		exit.setVerticalTextPosition(JLabel.BOTTOM);
-		exit.setBounds(350,450,110,40);
-		exit.setBorder(border); //解決できない場合は削除でおk
+		exit.setBounds(350,450,150,40);
 
 		//選択肢アイコン
 		select = new JLabel();
@@ -103,7 +101,7 @@ public class TitlePanel extends JPanel {
 		message.setHorizontalTextPosition(JLabel.CENTER);
 		message.setVerticalTextPosition(JLabel.CENTER);
 		message.setBounds(249,517,300,30);
-		message.setBorder(border); //解決できない場合は削除でおk
+		message.setBorder(border); //見栄えが悪い場合は削除
 
 		//配置
 		this.setLayout(null);
