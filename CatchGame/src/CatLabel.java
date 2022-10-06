@@ -30,7 +30,7 @@ public class CatLabel extends JLabel {
 		//初期設定の座標と速さを決定
 		//座標
 		x = new java.util.Random().nextInt(Main.mainWindow.mainPanel.getWidth()-this.getWidth());
-		y = new java.util.Random().nextInt(Main.mainWindow.mainPanel.getWidth()-this.getWidth());
+		y = new java.util.Random().nextInt(Main.mainWindow.mainPanel.getHeight()-this.getHeight());
 		//速度
 		xVelocity = -5 + new java.util.Random().nextInt(11);
 		yVelocity = -5 + new java.util.Random().nextInt(11);
