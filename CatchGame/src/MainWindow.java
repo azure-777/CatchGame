@@ -2,7 +2,6 @@ import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 //メインウィンドウのクラス
@@ -22,10 +21,8 @@ public class MainWindow extends JFrame {
 
 	//コンストラクタ
 	MainWindow(){
-		//ウィンドウ左上のアイコンとタイトル
-		this.setTitle("タイトル");
-		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource(""));
-		this.setIconImage(icon.getImage());
+		//ウィンドウのタイトル
+		this.setTitle("CatchGame");
 
 		//ウィンドウの処理
 		//×ボタンを押下した際にプログラムが終了する
