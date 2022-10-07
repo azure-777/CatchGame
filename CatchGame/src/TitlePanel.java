@@ -48,14 +48,6 @@ public class TitlePanel extends JPanel {
 		//②コンポネートの位置とサイズを指定
 		titleLabel.setBounds(100,10,100,30);
 		//ラベルをこのパネルに貼る
-		/*
-		  なぜthisを使用するのか？
-		  そもそもthisは自身のオブジェクト（インスタンスとクラス）を指す。
-		  今回の場合のthisは、JPanelクラスを継承したTitlePanelクラスのこと。
-		  さらに、JPanelクラスはContainerクラスを継承している。
-		  また、Containerクラスにはaddメソッドがある。
-		  Containerクラスにはaddメソッドは引数で指定されたコンポネートを最後に追加する。
-		 */
 		this.add(titleLabel);
 
 		//タイトルロゴを作成
@@ -171,12 +163,6 @@ public class TitlePanel extends JPanel {
 						System.exit(0);
 					}
 					break;
-
-				/*
-				 * 疑問【未解決】
-				 * Menu.STARTとMenu.EXITの値は？
-				 * →
-				 */
 				}
 			}
 		}
