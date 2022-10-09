@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -7,6 +8,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 
 public class MenuBar extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -16,6 +18,7 @@ public class MenuBar extends JPanel {
 	JLabel scoreLabel;
 	HomeButtonListener homeButtonListener;
 	int score;
+	JProgressBar timeLimitBar;
 
 	//コンストラクタ
 	public MenuBar() {
@@ -45,10 +48,19 @@ public class MenuBar extends JPanel {
 		scoreLabel = new JLabel("SCORE:0");
 		scoreLabel.setBounds(680,5,80,30);
 
+		//制限時間ラベル
+		timeLimitBar = new JProgressBar();
+		timeLimitBar.setBounds(250,5,300,30);
+		timeLimitBar.setForeground(Color.blue);
+		timeLimitBar.setFont(new Font("MV Boil",Font.BOLD,22));
+		//タイマーの文字（残り時間）を表示
+		timeLimitBar.setStringPainted(true);
+
 		//設置
 		this.add(homeButton);
 		this.add(homeLabel);
 		this.add(scoreLabel);
+		this.add(timeLimitBar);
 
 		}
 
