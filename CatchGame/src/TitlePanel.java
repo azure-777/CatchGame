@@ -13,7 +13,7 @@ import javax.swing.border.Border;
 public class TitlePanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 
-	//コンポネート
+	//フィールド
 	JLabel titleLabel;
 	JLabel title;
 	JLabel start;
