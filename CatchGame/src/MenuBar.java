@@ -50,6 +50,8 @@ public class MenuBar extends JPanel {
 
 		//制限時間ラベル
 		timeLimitBar = new JProgressBar();
+		//setValueメソッドの引数がバーの値になる
+		//timeLimitBar.setValue(100);
 		timeLimitBar.setBounds(250,5,300,30);
 		timeLimitBar.setForeground(Color.blue);
 		timeLimitBar.setFont(new Font("MV Boil",Font.BOLD,22));

@@ -38,10 +38,11 @@ public class GamePanel extends JPanel implements ActionListener{
 		fieldPanel = new FieldPanel();
 		this.add(menuBar, BorderLayout.NORTH);
 		this.add(fieldPanel, BorderLayout.CENTER);
-		//Timer　引数は各ミリ秒で設定　※ミリ秒1秒の1000分の1（0.001秒）を表すもの。1000ミリ秒が1秒に相当する。
+		/*Timer 引数は各ミリ秒で設定　※ミリ秒1秒の1000分の1（0.001秒）を表すもの。1000ミリ秒が1秒に相当する。
+		 * TitlePanelクラスでゲーム開始後にタイマーが始動する設定
+		 * なぜ10秒になるのか？とTimerの第一引数の10とminusメソッドの引数2000との関係が不明。
+		*/
 		timer = new Timer(10,this);
-		//これだとタイトル画面から10秒計算されてしまう。またなぜ10秒なのか不明。さらにTimerの第一引数の10とminusメソッドの引数1000との関係が不明。
-		this.minus(1000);
 	}
 
 	//コンポネートの設定

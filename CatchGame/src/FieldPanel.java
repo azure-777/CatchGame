@@ -107,7 +107,7 @@ public class FieldPanel extends JPanel {
 		public void mouseDragged(MouseEvent e) {
 			//マウスの座標からラベルの左上の座標を取得
 			int x = e.getXOnScreen() - dx;
-			int y = e.getXOnScreen() - dy;
+			int y = e.getYOnScreen() - dy;
 			if(x < Main.mainWindow.gamePanel.getWidth() - cat.getWidth() - 5 && x > 5) { cat.x = x;}
 			if(y < Main.mainWindow.gamePanel.getHeight() - cat.getHeight() - 5 && y > 5) { cat.y = y;}
 			cat.setLocation(cat.x,cat.y);
