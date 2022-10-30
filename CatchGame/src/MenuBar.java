@@ -8,7 +8,6 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JProgressBar;
 
 public class MenuBar extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -18,7 +17,10 @@ public class MenuBar extends JPanel {
 	JLabel scoreLabel;
 	HomeButtonListener homeButtonListener;
 	int score;
-	JProgressBar timeLimitBar;
+	JLabel timeLimitLabel;
+	//JProgressBar timeLimitBar;
+	//JLabel jLabel;
+	//Timer timer;
 
 	//コンストラクタ
 	public MenuBar() {
@@ -48,23 +50,60 @@ public class MenuBar extends JPanel {
 		scoreLabel = new JLabel("SCORE:0");
 		scoreLabel.setBounds(680,5,80,30);
 
-		//制限時間ラベル
-		timeLimitBar = new JProgressBar();
+		//制限時間ラベル(JProgressBar)
+		//timeLimitBar = new JProgressBar();
 		//setValueメソッドの引数がバーの値になる
-		//timeLimitBar.setValue(100);
-		timeLimitBar.setBounds(250,5,300,30);
-		timeLimitBar.setForeground(Color.blue);
-		timeLimitBar.setFont(new Font("MV Boil",Font.BOLD,22));
+		//GamePanel g = new GamePanel();
+		//timeLimitBar.setValue(g.i);
+		//timeLimitBar.setString("制限時間:30秒");
+		//timeLimitBar.setBounds(250,5,300,30);
+		//timeLimitBar.setForeground(Color.blue);
+		//timeLimitBar.setFont(new Font("MV Boil",Font.BOLD,22));
 		//タイマーの文字（残り時間）を表示
-		timeLimitBar.setStringPainted(true);
+		//timeLimitBar.setStringPainted(true);
+
+		//制限時間ラベル(JLabel)-文字列のみ設定
+		timeLimitLabel = new JLabel("制限時間:30秒");
+		timeLimitLabel.setBounds(320,5,300,30);
+		timeLimitLabel.setFont(new Font("MV Boil",Font.BOLD,22));
 
 		//設置
 		this.add(homeButton);
 		this.add(homeLabel);
 		this.add(scoreLabel);
-		this.add(timeLimitBar);
+		//this.add(timeLimitBar);
+		this.add(timeLimitLabel);
 
 		}
+
+//	public void CountDown() {
+//
+//		//timer
+//       jLabel = new JLabel();
+//        jLabel.setLayout(new FlowLayout());
+//        jLabel.setBounds(250,5,300,30);
+//        jLabel.setVisible(true);
+//
+//        timer = new Timer();
+//
+//        timer.scheduleAtFixedRate(new TimerTask() {
+//            int i = 20;
+//
+//            public void run() {
+//
+//                jLabel.setText("Time left: " + i);
+//                i--;
+//
+//                if (i < 0) {
+//                    timer.cancel();
+//                    jLabel.setText("Time Over");
+//                }
+//            }
+//        }, 0, 1000);
+//
+//        this.add(jLabel);
+//
+//	}
 
 	//内部クラス(ホームボタン用リスナー)
 	private class HomeButtonListener implements ActionListener{
