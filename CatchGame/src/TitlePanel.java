@@ -107,7 +107,7 @@ public class TitlePanel extends JPanel {
 		mykeyListener = new MykeyListener(this);
 	}
 
-	//選択の制御(内部クラス)
+	    //選択の制御(内部クラス)
 		private class MykeyListener implements KeyListener{
 			//貼りつけ先を保持
 			TitlePanel panel;
@@ -171,4 +171,5 @@ public class TitlePanel extends JPanel {
 				}
 			}
 		}
+
 }

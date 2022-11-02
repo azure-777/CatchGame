@@ -16,11 +16,9 @@ public class MenuBar extends JPanel {
 	JLabel homeLabel;
 	JLabel scoreLabel;
 	HomeButtonListener homeButtonListener;
-	int score;
+	int score; //FieldPanelのスコア計算用変数
 	JLabel timeLimitLabel;
 	//JProgressBar timeLimitBar;
-	//JLabel jLabel;
-	//Timer timer;
 
 	//コンストラクタ
 	public MenuBar() {
@@ -71,39 +69,10 @@ public class MenuBar extends JPanel {
 		this.add(homeButton);
 		this.add(homeLabel);
 		this.add(scoreLabel);
-		//this.add(timeLimitBar);
 		this.add(timeLimitLabel);
+		//this.add(timeLimitBar);
 
 		}
-
-//	public void CountDown() {
-//
-//		//timer
-//       jLabel = new JLabel();
-//        jLabel.setLayout(new FlowLayout());
-//        jLabel.setBounds(250,5,300,30);
-//        jLabel.setVisible(true);
-//
-//        timer = new Timer();
-//
-//        timer.scheduleAtFixedRate(new TimerTask() {
-//            int i = 20;
-//
-//            public void run() {
-//
-//                jLabel.setText("Time left: " + i);
-//                i--;
-//
-//                if (i < 0) {
-//                    timer.cancel();
-//                    jLabel.setText("Time Over");
-//                }
-//            }
-//        }, 0, 1000);
-//
-//        this.add(jLabel);
-//
-//	}
 
 	//内部クラス(ホームボタン用リスナー)
 	private class HomeButtonListener implements ActionListener{

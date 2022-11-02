@@ -21,7 +21,6 @@ public class GamePanel extends JPanel implements ActionListener{
 	//リスナー
 	MyKeyListener myKeyListener;
 	//Timer用フィールド
-	int max;
 	int now;
 	int hold;
 	Timer timer;
@@ -107,7 +106,7 @@ public class GamePanel extends JPanel implements ActionListener{
 		}
 	}
 
-	//Timer
+	//Timer:メソッドの呼び出し
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO 自動生成されたメソッド・スタブ
@@ -116,6 +115,7 @@ public class GamePanel extends JPanel implements ActionListener{
 		}else {
 			this.timer.stop();
 			Main.mainWindow.setFrontScreenAndFocus(ScreenMode.TITLE);
+			//結果表示
 		}
 	}
 
