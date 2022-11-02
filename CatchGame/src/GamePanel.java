@@ -1,10 +1,12 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -116,6 +118,12 @@ public class GamePanel extends JPanel implements ActionListener{
 			this.timer.stop();
 			Main.mainWindow.setFrontScreenAndFocus(ScreenMode.TITLE);
 			//結果表示
+			JFrame resultScoreFrame = new JFrame();
+	        JLabel resultScoreLabel = new JLabel("SCORE:" + Main.mainWindow.gamePanel.menuBar.score);
+	        resultScoreFrame.setLayout(new FlowLayout());
+	        resultScoreFrame.setBounds(500, 300, 400, 100);
+	        resultScoreFrame.add(resultScoreLabel);
+	        resultScoreFrame.setVisible(true);
 		}
 	}
 

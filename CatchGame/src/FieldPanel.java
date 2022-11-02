@@ -127,7 +127,6 @@ public class FieldPanel extends JPanel {
 				Main.mainWindow.gamePanel.menuBar.score += cat.score;
 				String str = "SCORE:" + Main.mainWindow.gamePanel.menuBar.score;
 				Main.mainWindow.gamePanel.menuBar.scoreLabel.setText(str);
-				//スコア結果表示用
 				//不可視化処理
 				cat.setVisible(false);
 			}else {
