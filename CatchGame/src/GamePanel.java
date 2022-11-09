@@ -74,6 +74,12 @@ public class GamePanel extends JPanel implements ActionListener{
 		this.timer.start();
 	}
 
+	//ゲームリセットメソッド
+	public void resetGame() {
+		this.fieldPanel.removeAll();
+		this.fieldPanel.prepareComponents();
+	}
+
 	//内部クラス(Hが押下されたらタイトルへ)
 	private class MyKeyListener implements KeyListener {
 		//貼り付け先を保持
@@ -124,6 +130,9 @@ public class GamePanel extends JPanel implements ActionListener{
 	        resultScoreFrame.setBounds(500, 300, 400, 100);
 	        resultScoreFrame.add(resultScoreLabel);
 	        resultScoreFrame.setVisible(true);
+	        //ゲームリセット
+	        GamePanel reset = new GamePanel();
+	        reset.resetGame();
 		}
 	}
 
