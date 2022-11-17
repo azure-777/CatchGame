@@ -48,21 +48,9 @@ public class MenuBar extends JPanel {
 		scoreLabel = new JLabel("SCORE:0");
 		scoreLabel.setBounds(680,5,80,30);
 
-		//制限時間ラベル(JProgressBar)
-		//timeLimitBar = new JProgressBar();
-		//setValueメソッドの引数がバーの値になる
-		//GamePanel g = new GamePanel();
-		//timeLimitBar.setValue(g.i);
-		//timeLimitBar.setString("制限時間:30秒");
-		//timeLimitBar.setBounds(250,5,300,30);
-		//timeLimitBar.setForeground(Color.blue);
-		//timeLimitBar.setFont(new Font("MV Boil",Font.BOLD,22));
-		//タイマーの文字（残り時間）を表示
-		//timeLimitBar.setStringPainted(true);
-
 		//制限時間ラベル(JLabel)-文字列のみ設定
-		timeLimitLabel = new JLabel("制限時間:30秒");
-		timeLimitLabel.setBounds(320,5,300,30);
+		timeLimitLabel = new JLabel("君は10秒で何点とれるかな？");
+		timeLimitLabel.setBounds(265,5,300,30);
 		timeLimitLabel.setFont(new Font("MV Boil",Font.BOLD,22));
 
 		//設置

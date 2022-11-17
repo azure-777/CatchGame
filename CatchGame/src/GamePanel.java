@@ -78,6 +78,7 @@ public class GamePanel extends JPanel implements ActionListener{
 	public void resetGame() {
 		this.fieldPanel.removeAll();
 		this.fieldPanel.prepareComponents();
+		menuBar.scoreLabel = new JLabel("SCORE:0");
 	}
 
 	//内部クラス(Hが押下されたらタイトルへ)
@@ -131,8 +132,8 @@ public class GamePanel extends JPanel implements ActionListener{
 	        resultScoreFrame.add(resultScoreLabel);
 	        resultScoreFrame.setVisible(true);
 	        //ゲームリセット
-	        GamePanel reset = new GamePanel();
-	        reset.resetGame();
+//	        GamePanel reset = new GamePanel();
+//	        reset.resetGame();
 		}
 	}
 

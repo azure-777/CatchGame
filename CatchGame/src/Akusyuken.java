@@ -9,6 +9,6 @@ public class Akusyuken  extends Animal {
 		super.image = new ImageIcon(getClass().getClassLoader().getResource("idol_akusyuken.png")).getImage();
 		super.score = 500;
 		super.voiceKey = "チャリン";
-		super.escapeTime = 100;
+		super.escapeTime = 5;
 	};
 }
