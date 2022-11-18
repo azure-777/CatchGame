@@ -39,10 +39,6 @@ public class GamePanel extends JPanel implements ActionListener{
 		fieldPanel = new FieldPanel();
 		this.add(menuBar, BorderLayout.NORTH);
 		this.add(fieldPanel, BorderLayout.CENTER);
-		/*Timer 引数は各ミリ秒で設定　※ミリ秒1秒の1000分の1（0.001秒）を表すもの。1000ミリ秒が1秒に相当する。
-		 * TitlePanelクラスでゲーム開始後にタイマーが始動する設定
-		 * なぜ10秒になるのか？とTimerの第一引数の10とminusメソッドの引数2000との関係が不明。
-		*/
 		timer = new Timer(10,this);
 	}
 
@@ -115,7 +111,7 @@ public class GamePanel extends JPanel implements ActionListener{
 		}
 	}
 
-	//Timer:メソッドの呼び出し
+	//タイマー
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO 自動生成されたメソッド・スタブ
@@ -131,9 +127,6 @@ public class GamePanel extends JPanel implements ActionListener{
 	        resultScoreFrame.setBounds(500, 300, 400, 100);
 	        resultScoreFrame.add(resultScoreLabel);
 	        resultScoreFrame.setVisible(true);
-	        //ゲームリセット
-//	        GamePanel reset = new GamePanel();
-//	        reset.resetGame();
 		}
 	}
 
