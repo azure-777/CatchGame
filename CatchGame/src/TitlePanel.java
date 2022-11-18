@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
@@ -36,7 +37,7 @@ public class TitlePanel extends JPanel {
 		//レイアウトの設定
 		this.setLayout(null);
 		//背景の設定
-		this.setBackground(Color.cyan);
+		this.setBackground(Color.orange);
 	}
 
 	//コンポネートの設定
@@ -44,7 +45,7 @@ public class TitlePanel extends JPanel {
 		//ラベルを生成
 		titleLabel = new JLabel();
 		//①ラベルに文字を記入
-		titleLabel.setText("タイトル画面");
+		//titleLabel.setText("タイトル画面");
 		//②コンポネートの位置とサイズを指定
 		titleLabel.setBounds(100,10,100,30);
 		//ラベルをこのパネルに貼る
@@ -53,12 +54,15 @@ public class TitlePanel extends JPanel {
 		//タイトルロゴを作成
 		//タイトルロゴを作成するためにJLabelのインスタンスを生成してtitle変数に代入
 		title = new JLabel();
+		//タイトル画像 600*300設定
+		ImageIcon titleImage = new ImageIcon(getClass().getClassLoader().getResource("docCat.png"));
+		title.setIcon(titleImage);
 		//タイトルロゴの設定
 		title.setHorizontalAlignment(SwingConstants.CENTER);
-		title.setVerticalAlignment(SwingConstants.BOTTOM);
-		title.setText("CAT");
-		title.setHorizontalTextPosition(JLabel.CENTER);
-		title.setVerticalTextPosition(SwingConstants.BOTTOM);
+//		title.setVerticalAlignment(SwingConstants.BOTTOM);
+//		title.setText("CAT");
+//		title.setHorizontalTextPosition(JLabel.CENTER);
+//		title.setVerticalTextPosition(SwingConstants.BOTTOM);
 		title.setBounds(90,10,600,350);
 		title.setBorder(border);
 
