@@ -162,7 +162,7 @@ public class TitlePanel extends JPanel {
 						//ゲームが開始する（＝画面切り替えメソッドが呼び出される）
 						Main.mainWindow.setFrontScreenAndFocus(ScreenMode.GAME);
 						//切り替えと同時にタイマーが始動 ※10秒設定(実際は11秒)
-						GamePanel g = new GamePanel();;
+						GamePanel g = new GamePanel();
 						g.minus(950);
 					// checkMenu変数の値とMenu.EXITで取得した値が同値の場合
 					}else if(checkMenu == Menu.EXIT) {
